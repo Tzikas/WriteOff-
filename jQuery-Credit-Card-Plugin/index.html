@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.payments.js"></script>
+		<link rel="stylesheet" href="css/payments.css" type="text/css" media="screen" />
+		<script type="text/javascript">$(document).ready(function() {$('#creditcardform').paymentForm();});</script>
+	</head>
+	<body>
+		<div class="former">
+			<form id="creditcardform"  method="POST" action="">
+				<div class="textbox">
+				    <div class="prompt">
+				      	<div class="holding">        
+				    		<input type="text" id="creditcard" name="creditcard" maxlength="21"/>               	        		              
+				    	</div>  
+					</div>		
+					<div class="prompt">
+						<div class="holding">
+							&nbsp;Exp. Date&nbsp;
+					        <input type="text" id="cardmonth" name="cardmonth" style="width: 32px" maxlength="2"/>         
+							<input type="text" id="cardyear" name="cardyear" maxlength="2" style="width: 32px" />  </span>       
+							<input type="text" id="cardsecurecode" name="cardsecurecode"  maxlength="4" style="width: 120px" />         
+							&nbsp;&nbsp;&nbsp;<a href="">What's this</a>
+						</div>
+					</div>
+					
+					<div class="prompt">
+						<div class="holding ">        
+							<input type="text" value="" id="cardnameon" name="cardnameon" />
+						</div>
+					</div>
+					<div class="prompt">
+						<div class="holding ">        
+							<input type="text" value="" id="cardstreet" name="cardstreet"  />
+						</div>
+					</div>
+				
+					<div class="prompt">
+						<div class="holding">        
+							<input type="text" id="cardopt" name="cardopt" />        
+				      </div>      
+					</div>
+					
+					<div class="prompt">    	
+						<div class="holding">  
+				        	<input id="cardcity" name="cardcity" type="text" style="width: 230px;" />
+					        <input id="cardstate" name="cardstate"  type="text" maxlength="2" style="width: 50px;" />
+					        <input id="cardpostal" name="cardpostal" maxlength="10" type="text" style="width: 122px" />
+				        </div>      
+					</div>
+					<div class="prompt">
+						<input type="submit" class="submit" value="Submit" >
+					</div>
+				</div>	
+			</form>
+		</div>
+	</body>
+</html>

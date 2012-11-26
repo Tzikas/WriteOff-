@@ -1,0 +1,406 @@
+#wrapper {
+	position:absolute; z-index:1;
+	top:40px;
+    bottom:0px;
+    left:0;
+	width:100%;
+	overflow:auto;
+    margin: 0px;
+    padding: 0px;
+    float: right;
+}
+
+.big_title #wrapper {
+    top: 80px;
+}
+
+
+h4{
+    color: white;
+    
+}
+
+#scroller p {
+    padding: 20px;
+    text-align: justify;
+}
+
+/* scrolling text */ 
+
+.scroll{
+height:30px;
+overflow:hidden;
+position:relative;
+border: 1px solid #111;
+background-color: #008021;
+}
+
+.scroll2{
+height:30px;
+overflow:hidden;
+position:relative;
+border: 1px solid #111;
+background-color: #0066cc;
+}
+
+.scrollingtext{
+    white-space:nowrap;
+    position:absolute;
+    color: #eee;
+    font-size: 16px;
+    font-family: 'Droid Sans', sans-serif;    display: inline;
+    padding: 6px;
+
+}
+
+
+.ui-btn-text {
+    color: #eee;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Droid Sans', sans-serif;    display: inline;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.addStuff h5 a{
+    background-color: #222;
+    color: #0066cc;
+}
+
+.accounts {
+    padding-top: 30px;
+}
+
+.accounts h2 {
+    font-size: 14px;
+    font-family: 'Droid Sans', sans-serif;
+    color: #0066cc;
+}
+
+.accounts li {
+    font-size: 14px;
+    font-family: 'Droid Sans', sans-serif;
+    background-color: #444;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+.accounts li a{
+    color: #eee;
+}
+/*#0066CC*cool blue*/
+.ui-btn-inner ui-corner-left{
+    border: 1px white green;
+}
+
+.ui-loader ui-corner-all ui-body-a ui-loader-default{
+    margin-left: -1000px;
+    position: absolute;
+}
+
+.ui-icon ui-icon-loading {
+    margin-left: -1000px;
+    position: absolute;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.ui-footer {
+    background-color: #000;
+    opacity: .90;
+    -moz-box-shadow:  0px -5px 5px  #000;
+		-webkit-box-shadow: 0px -5px 5px  #000;
+		box-shadow: 0px -5px 5px  #000;
+}
+
+
+
+.footer {
+}
+
+
+
+.ui-header  {
+    background-color: black;
+    opacity: .87;
+    padding: 4px;
+}
+
+
+
+
+.ui-title {
+    color: #008021;
+    width: 50%;
+
+}
+
+
+.bighead .header {
+}
+
+.ui-header h1 {
+}
+
+
+.ui-header  h4 {
+    color: #333;
+    font-family: sans-serif;
+    
+    }
+
+.ui-header img{
+    height: 45px;
+    margin-top: -7px;
+}
+
+
+h1 {
+    color: #eee;
+    font-family: sans-serif;
+}
+
+h4 {
+    font-family: sans-serif;
+    color: #0066cc;
+    text-align: center;
+    font-size: 14px;
+}
+
+.ui-collapsible-content  {
+    border: 1px solid black;
+    background-color: #333;
+
+}
+
+
+ #thelist{
+    padding: 0px;
+    margin-top: 60px;
+    background-color: #222;
+    opacity: 1;
+}
+
+
+.theListItem h3{
+ border: 1px solid #666;
+ padding: 17px;
+}
+
+.theListItem li{
+ border: 1px solid #666;
+ padding: 17px;
+ color: white;
+ }
+
+.theListItem li a {
+    color: white;
+    font-family: sans-serif;
+ }
+
+.theListItem li h6 {
+margin-left: 80%;
+display: inline;
+font-size: 20px;
+}
+
+
+ .spending_history{
+    padding: 0px;
+    margin-top: 0px;
+    background-color: #0066cc;
+    opacity: 1;    
+}
+
+ #spending_history .theListItem h3{
+    padding: 0px;
+    margin-top: 60px;
+    background-color: yellow;
+    opacity: 1;
+     padding: 7px;
+}
+
+#spending_history .theListItem li {
+}
+
+
+.menu2 img {
+height: 50px;
+margin: 0px;
+opacity: 1;
+}
+
+
+.menu_left{
+    float:left;
+     width: 50%;
+
+}
+
+.menu_right{
+    float:right;
+     width: 50%;
+
+}
+
+
+
+.layer_left {
+   margin-top: 0px;
+    width: 50%;
+    background-color: #000;
+    height: 570px;
+    position: absolute;
+    float: left;
+    opacity: .7;
+    z-index: -2;
+       -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+    
+    
+}
+.layer_right {
+    margin-top: 0px;
+    width: 50%;
+    background-color: #000;
+    height: 570px;
+    position: absolute;
+    margin-left: 50%;
+    float: right;
+    opacity: .1;
+     z-index: -1;
+
+}
+
+.layer_top {
+    width: 100%;
+    background-color: #000;
+    height: 190px;
+    position: absolute;
+    float: left;
+    opacity: .2;
+
+}
+
+.layer_middle{
+    width: 100%;
+    background-color: #000;
+    height: 192px;
+    position: absolute;
+    float: left;
+    opacity: .3;
+    margin-top: 190px;
+
+}
+
+.layer_bottom {
+    width: 100%;
+    background-color: #000;
+    height: 190px;
+    position: absolute;
+    float: left;
+    opacity: .4;
+    margin-top: 382px;
+
+}
+
+.ui-controlgroup-controls{
+    
+    width: 100%;
+    margin: 0px;
+
+}
+
+.options, .red, .blue, .green {
+    border: 5px solid #333;
+    width: 30%;
+    opacity: 1;
+    padding: 10px 1px 10px 1px;
+    float: left;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+.red {
+    background-color:#ff3333;
+}
+.blue {
+    background-color: #0066cc;
+}
+
+.green {
+    background-color: #008021;
+}
+.green:active {
+    -moz-box-shadow:    inset 0 0 5px #000000;
+   -webkit-box-shadow: inset 0 0 5px #000000;
+   box-shadow:         inset 0 0 5px #000000;
+}
+
+.red:active {
+    -moz-box-shadow:    inset 0 0 5px #000000;
+   -webkit-box-shadow: inset 0 0 5px #000000;
+   box-shadow:         inset 0 0 5px #000000;
+}
+.blue:active {
+    -moz-box-shadow:    inset 0 0 5px #000000;
+   -webkit-box-shadow: inset 0 0 5px #000000;
+   box-shadow:         inset 0 0 5px #000000;
+}
+
+
+
+.forms{
+    width: 60%;
+}
+
+
+
+#categories h4 {
+    display: inline;
+}
+
+#categories li {
+        background-color: #aaa;
+        border: 1px solid #111;
+}
+
+#categories .left {
+    padding: 5px 5px 10px 5px;
+    overflow: hidden;
+    position: absolute;
+    max-width:90%;
+    max-height: 10px;
+    color: #222;
+}
+
+
+#categories li h6 a {
+    float: right;
+}
+
+
+
+/*Spending Histoery */
+ 
+
+
+/*
+.addStuff {
+    border: 1px dashed green;
+}
+/*.addStuff  .tabs{
+    border: 1px  dashed orange;
+}*/
+
+
+
+#scroller {
+    padding-bottom: 119px;
+    }

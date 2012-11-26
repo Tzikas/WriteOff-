@@ -1,0 +1,22 @@
+{
+    IBClasses = (
+        {CLASS = IPSDeviceImage; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = IPSMainWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {
+            ACTIONS = {chromeHeightChanged = id; rotate = id; toggleKeyboard = id; }; 
+            CLASS = IPSMainWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_currentDimsText" = NSTextField; 
+                "_iphoneImage" = IPSDeviceImage; 
+                "_landscapeBackButton" = NSButton; 
+                "_landscapeForwardButton" = NSButton; 
+                "_portraitBackButton" = NSButton; 
+                "_portraitForwardButton" = NSButton; 
+                "_webview" = WebView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

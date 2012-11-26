@@ -1,0 +1,63 @@
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<script src="js/jQuery/jquery-1.8.2.min.js"></script>
+<!--<script src="http://code.jquery.com/mobile/1.2.0-rc.2/jquery.mobile-1.2.0-rc.2.min.js"></script>-->
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>   
+
+
+
+<script src="js/script.js"></script>
+
+
+
+
+
+<style>
+
+.scroll{
+width:430px;
+height:21px;
+overflow:hidden;
+position:relative;
+}
+
+
+.scrollingtext{
+white-space:nowrap;
+position:absolute;
+}
+</style>
+
+<script>
+    $(document).ready(function() {
+$('.scrollingtext').bind('marquee', function() {
+var ob = $(this);
+var tw = ob.width();
+var ww = ob.parent().width();
+ob.css({ right: -tw });
+ob.animate({ right: ww }, 20000, 'linear', function() {
+ob.trigger('marquee');
+});
+}).trigger('marquee');
+
+});
+</script>
+
+
+</head>
+
+
+<body>
+    <div class="scroll">
+        <div class="scrollingtext">niko is the shit nifads;kfha;sdf a;dsf  s;dafj ad;skh adjksh asd;fkh sda;f hsad;kf hsad;kf s
+        </div>
+        </div>
+</body>
+
+
+
+
+</html>

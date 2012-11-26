@@ -1,0 +1,291 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>My Page</title> 
+	
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<script src="js/jQuery/jquery-1.8.2.min.js"></script>
+<!--<script src="http://code.jquery.com/mobile/1.2.0-rc.2/jquery.mobile-1.2.0-rc.2.min.js"></script>-->
+<script src="jquery.mobile-1.2.0-rc.2/jquery.mobile-1.2.0-rc.2.min.js"></script>
+<script src="jquery.mobile-1.2.0-rc.2/jquery.mobile-1.2.0-rc.2.min.css"></script>
+
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>   
+
+<script type="text/javascript" src="cubiq-iscroll-bad88fb/src/iscroll.js"></script>    
+
+<script src="js/scrollbar.js"></script>
+<script src="js/script.js"></script>
+
+<link rel="stylesheet" href="css/jQueryMobileStructure.css" />
+<link rel="stylesheet" href="css/style.css" /> 
+<link rel="stylesheet" href="css/nikostyle.css" /> 
+
+
+<link href="mobiscroll-2.1/css/mobiscroll-2.1.custom.min.css" rel="stylesheet" type="text/css" />
+<script src="mobiscroll-2.1/js/mobiscroll-2.1.custom.min.js" type="text/javascript"></script>
+
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
+
+
+<script type="text/javascript">
+        $(function () {
+            var curr = new Date().getFullYear();
+            var opt = {
+
+            }
+                opt.date = {preset : 'date'};
+	opt.datetime = { preset : 'datetime', minDate: new Date(2012,3,10,9,22), maxDate: new Date(2014,7,30,15,44), stepMinute: 5  };
+	opt.time = {preset : 'time'};
+	<!--Script-->
+
+            $('select.changes').bind('change', function() {
+                var demo = $('#demo').val();
+                $(".demos").hide();
+                if (!($("#demo_"+demo).length))
+                    demo = 'default';
+
+                $("#demo_" + demo).show();
+                $('#test_'+demo).val('').scroller('destroy').scroller($.extend(opt[$('#demo').val()], { theme: $('#theme').val(), mode: $('#mode').val(), display: $('#display').val(), lang: $('#language').val() }));
+            });
+
+            $('#demo').trigger('change');
+        });
+    </script>
+
+
+
+
+
+
+<!-- Swipe to Delete -->
+
+<link rel="stylesheet" href="src/jquery.swipeButton.css" />
+	
+	<script src="dist/jquery.swipeButton-1.2.1.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+
+			// attach the plugin to an element
+			$('#swipeMe li').swipeDelete({
+				btnTheme: 'e',
+				btnLabel: 'Delete',
+				btnClass: 'aSwipeButton',
+				click: function(e){
+					e.preventDefault();
+					var url = $(e.target).attr('href');
+					$(this).parents('li').slideUp();
+					$.post(url, function(data) {
+						console.log(data);
+					});
+				}
+			});
+
+			$('#triggerMe').on('click', function(){
+				$('#swipeMe li:nth-child(3)').trigger('swiperight')
+			});
+
+		});
+	</script>
+-->
+
+</head>
+
+
+
+
+
+<body> 
+
+
+
+
+<div data-role="page">
+
+    
+<div data-role="header" class="header">
+	<a href="index.html" data-icon="delete" data-corners= "false"><img src= "images/squirrel.png"/></a>
+          	<h1>Manage Accounts</h1>
+</div>
+<!--
+	<div data-role="content">	
+		<p>Hello world</p>		
+	</div><!-- /content 
+
+<div class="layer_top">
+</div>
+<div class="layer_middle">
+</div>
+<div class="layer_bottom">
+</div>
+<!-- CURRENT ACCOUTNS --> 
+<div id="wrapper">
+<div id="scroller">
+    
+<div class= "addStuff">
+    <div data-role="collapsible" data-inset="true" >
+       <h5> Add a credit card</h5>
+         
+       <div data-role="fieldcontain">
+ 
+<input type="password" name="credit_card_number" id="credit_card_number" value="" placeholder="Credit Card Number">
+<input type="password" name="security_code" id="security_code" value="" placeholder="Security Code">
+<input type="date" name="expiration_date" id="expiration_date" value="" placeholder="Expiration Date">
+<input type="password" name="name" id="name" value="" placeholder="Name On Card">
+<input type="password" name="street_address" id="street_address" value="" placeholder="Street Address">
+<input type="text" name="city" id="city" value="" placeholder="City">
+<input type="number" name="zip_code" id="zip_code" value="" placeholder="Zip Code">
+
+    </div>
+</div>
+
+<div class= "addStuff">
+    <div data-role="collapsible" data-inset="true" >
+       <h5> Add an account</h5>
+    
+    <label for="basic">Text Input:</label>
+
+       <div data-role="fieldcontain">
+ 
+<input type="password" name="credit_card_number" id="credit_card_number" value="" placeholder="Credit Card Number">
+<input type="password" name="security_code" id="security_code" value="" placeholder="Security Code">
+<input type="date" name="expiration_date" id="expiration_date" value="" placeholder="Expiration Date">
+<input type="password" name="name" id="name" value="" placeholder="Name On Card">
+<input type="password" name="street_address" id="street_address" value="" placeholder="Street Address">
+<input type="text" name="city" id="city" value="" placeholder="City">
+<input type="number" name="zip_code" id="zip_code" value="" placeholder="Zip Code">
+
+    </div>
+</div>
+
+<div class= "addStuff">
+    <div data-role="collapsible" data-inset="true" >
+       <h5> Add an asset</h5>
+         <label for="basic">Text Input:</label>
+           <div data-role="fieldcontain">
+                <input type="password" name="credit_card_number" id="credit_card_number" value="" placeholder="Credit Card Number">
+                <input type="password" name="security_code" id="security_code" value="" placeholder="Security Code">
+                <input type="date" name="expiration_date" id="expiration_date" value="" placeholder="Expiration Date">
+                <input type="password" name="name" id="name" value="" placeholder="Name On Card">
+                <input type="password" name="street_address" id="street_address" value="" placeholder="Street Address">
+                <input type="text" name="city" id="city" value="" placeholder="City">
+                <input type="number" name="zip_code" id="zip_code" value="" placeholder="Zip Code">
+             </div>
+        </div>
+    
+    
+
+    
+    </div>
+</div>
+
+<div class="accounts">
+<h2>Existing Acounts </h2>
+
+<ul data-role="listview" >
+        <div id= "Credit Cards">
+	<li><a href="AccountDetails.html">BofA Enhcanced Checking 3212</a></li>
+	<li><a href="AccountDetails.html">BankAmericard Platinum Plus Visa 4567</a></li>
+    <li><a href="AccountDetails.html">CITI Platinum 4331</a></li>
+        </div>
+</ul>
+
+
+
+<ul data-role="listview" >
+        <div id= "Accounts">
+	<li><a href="AccountDetails.html">Bank of America Checking</a></li>
+	<li><a href="AccountDetails.html">Bank of America Savings</a></li>
+        </div>
+</ul>
+
+
+
+<ul data-role="listview" >
+        <div id= "Assets">
+	<li><a href="AccountDetails.html">Car</a></li>
+	<li><a href="AccountDetails.html">Boat</a></li>
+    <li><a href="AccountDetails.html">SpaceShip</a></li>
+        </div>
+</ul>
+
+</div>
+
+
+        </div>
+    </div>
+
+
+<!--
+<a href="index.html" data-role="button" data-icon="plus" data-iconpos="top" data-role="collapsible">Add Account</a>
+<a href="index.html" data-role="button" data-icon="plus" data-iconpos="top">Add Credit Card</a>
+<a href="index.html" data-role="button" data-icon="plus" data-iconpos="top">Add Asset</a>
+-->
+
+
+
+<!-- ADD ACCOUNTS & ASSETS 
+
+<div class= "addStuff">
+    <div data-role="collapsible" data-inset="true" >
+       <h5> account</h5>
+    
+    <label for="basic">Text Input:</label>
+    <input type="text" name="name" id="basic" data-mini="true" />
+    
+    <fieldset data-role="controlgroup" data-type="horizontal">
+    </fieldset>
+    
+    </div>
+    <div class= "tabs" data-role="collapsible" data-inset="true">
+       <h5>Add a credit card</h5>
+    
+    <label for="basic">Text Input:</label>
+    <input type="text" name="name" id="basic" data-mini="true" />
+    
+    <fieldset data-role="controlgroup" data-type="horizontal">
+    </fieldset>
+    
+    </div>
+    
+    <div data-role="collapsible" data-inset="true">
+       <h5>Add an asset</h5>
+    
+    <label for="basic">Text Input:</label>
+    <input type="text" name="name" id="basic" data-mini="true" />
+    
+    <fieldset data-role="controlgroup" data-type="horizontal">
+    </fieldset>
+    </div>
+</div>
+-->
+<div data-role="footer" data-id="foo1" data-position="fixed" >
+	<div data-role="navbar">
+            <div class="menu2">
+		<ul>
+			<li><a data-ajax="false" href="trans.html" ><img src="images/transactions2.png"></a></li>
+			<li><a href="accounts.html" ><img src="images/eye2.png"></a></li>
+			<li><a href="summary.html" ><img src="images/summary.png"></a></li>
+			<li><a href="camera.html" ><img src="images/camera2.png"></a></li>
+    	</ul>
+            </div>
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+
+
+
+
+
+
+
+
+</div><!-- /page -->
+
+</body>
+</html>
